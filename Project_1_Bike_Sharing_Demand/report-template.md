@@ -13,11 +13,11 @@ values in the results and there was none.
 
 ### **What was the top ranked model that performed?**
 
-The top ranked model was the **KNeighborsUnif_BAG_L1** with a model
-score of **-101.546199** and with a score validation of **0.044973**
-which was the lowest out of the Models that trained in 10 minutes. The
-prediction time was also the lowest making it a very fast model for
-making the right predictions with a time of **0.039932.**
+The top ranked model was the **KNeighborsUnif_BAG_L1** with a score
+validation of **-101.546199** which was the lowest out of the Models
+that trained in 10 minutes. The prediction time was also very low making
+it a very fast model for making the right predictions with a time of
+**0.055712.**
 
 ## **Exploratory data analysis and feature creation**
 
@@ -34,11 +34,11 @@ plotted. The following were discovered:
 -   The early morning hours between 6 and 7 in the morning are also when
     > the humidity is at its highest.
 
-> ![](vertopal_a3b0f1e3677d4fcc9a5bc6b02bd0618f/media/image4.png){width="6.5in"
-> height="2.0833333333333335in"}
+> ![](vertopal_d2eaf3f8086c4bcd8e4823b26f5740d7/media/image2.png){width="6.741898512685914in"
+> height="2.1574070428696412in"}
 >
-> ![](vertopal_a3b0f1e3677d4fcc9a5bc6b02bd0618f/media/image2.png){width="5.4375in"
-> height="2.875in"}
+> ![](vertopal_d2eaf3f8086c4bcd8e4823b26f5740d7/media/image7.png){width="5.209490376202974in"
+> height="2.754443350831146in"}
 
 -   Around 4 o\'clock in the afternoon is also when the wind speed is
     > highest.
@@ -49,8 +49,8 @@ plotted. The following were discovered:
     > exercise first thing in the morning.The highest peak is at roughly
     > 5:00 p.m.
 
-> ![](vertopal_a3b0f1e3677d4fcc9a5bc6b02bd0618f/media/image6.png){width="6.5in"
-> height="1.6666666666666667in"}
+> ![](vertopal_d2eaf3f8086c4bcd8e4823b26f5740d7/media/image5.png){width="6.905092957130359in"
+> height="2.0833333333333335in"}
 
 In order to update the categorical datas \[\"season\" and \"weather\"\]
 using the.get_dummies() function, I developed a new feature utilizing
@@ -58,57 +58,57 @@ feature engineering. This used integers of 0s and 1s to categorize the
 season and weather into different groups. Below is the heatmap of count
 against the time of the day.
 
-![](vertopal_a3b0f1e3677d4fcc9a5bc6b02bd0618f/media/image5.png){width="4.27841426071741in"
-height="3.182292213473316in"}
+![](vertopal_d2eaf3f8086c4bcd8e4823b26f5740d7/media/image6.png){width="3.6428991688538934in"
+height="2.7083333333333335in"}
 
 ### **How much better did your model perform after adding additional features and why do you think that is?**
 
-Following the addition of the new function, it performed poorly. I
-don\'t know the cause, and it surprises me. I\'m looking forward to the
-review. From a score of 1.98, it received a kaggle score of roughly 2.7.
-I\'m not sure if the score is a measuring tool, but I was genuinely
-shocked. I was able to later add more features from the humidity,
-temperature and windspeed table. More feature were added and with
-Hyperparameter tuning, I got a Kaggle score of 1.677 which was my
-performance.
+Following the addition of the new function, it performed way better than
+when feature engineering was not applied. From a kaggle score of 1.80162
+to a lower score of 0.46618 (which shows that the model performed
+better. I added more features after the hyperparameter tuning was done
+from the humidity, temperature and windspeed table. Without the
+hyperparameter tuning after this additional features were added, a
+kaggle score of 0.56602 was gotten.
 
 Below is the picture of the heatmap after more features were added.
 
-![](vertopal_a3b0f1e3677d4fcc9a5bc6b02bd0618f/media/image8.png){width="5.8268744531933505in"
-height="4.932292213473316in"}
+![](vertopal_d2eaf3f8086c4bcd8e4823b26f5740d7/media/image8.png){width="7.135995188101488in"
+height="3.875in"}
 
 ## **Hyper parameter tuning**
 
 ### **How much better did your model perform after trying different hyper parameters?**
 
 After each hyperparameter tweaking, they improved greatly. However,
-applying the hyperparameter **\"NN\"** caused the model to perform the
-poorest, proving that employing the neural technique will lead to subpar
-outcomes. However, the remaining hyperparameters improved the model\'s
-performance. The **XGBoost** was the best method so far in terms of
-prediction. The model performed even better when more features was added
-and trained using the XGBoost which gave a more precise answer and
-better performance
+applying the hyperparameter **\"XGBoost\"** caused the model to perform
+the poorest, with the reason unknownsince XGBoost is known to perform
+well Although the performance was not as bad as the initial eprfromance
+since the Kaggle score was **0.64240.**. However, the remaining
+hyperparameters improved the model\'s performance. The **GBM** was the
+best method so far in terms of prediction witha kaggle score of
+**0.53619**. The model performed well with **"NN"** with a kaggle score
+of **0.59439**.
 
 ### **If you were given more time with this dataset, where do you think you would spend more time?**
 
-Enhancing the model, particularly using XGBoost, KNN and RF models.
-Without using AutoGluon, I will conduct additional exploratory data
-analysis and test out other machine learning models like the
-RandomForest() and SVM Models to see how each one interprets the input
-data.
+Enhancing the model, particularly using XGBoost, KNN, RF models and
+machine learning models. Without using AutoGluon, I will conduct
+additional exploratory data analysis and test out other machine learning
+models like the RandomForest() and SVM Models to see how each one
+interprets the input data.
 
 ### **Create a table with the models you ran, the hyperparameters modified, and the kaggle score.**
 
-![](vertopal_a3b0f1e3677d4fcc9a5bc6b02bd0618f/media/image1.png){width="6.5in"
-height="1.625in"}
+![](vertopal_d2eaf3f8086c4bcd8e4823b26f5740d7/media/image1.png){width="5.666666666666667in"
+height="1.9375in"}
 
 ### **Create a line plot showing the top model score for the three (or more) training runs during the project.**
 
-![](vertopal_a3b0f1e3677d4fcc9a5bc6b02bd0618f/media/image3.png){width="6.5in"
-height="4.972222222222222in"}
+![](vertopal_d2eaf3f8086c4bcd8e4823b26f5740d7/media/image3.png){width="5.506944444444445in"
+height="4.103732502187227in"}
 
 ### **Create a line plot showing the top kaggle score for the three (or more) prediction submissions during the project.**
 
-![](vertopal_a3b0f1e3677d4fcc9a5bc6b02bd0618f/media/image7.png){width="4.119792213473316in"
-height="3.215181539807524in"}
+![](vertopal_d2eaf3f8086c4bcd8e4823b26f5740d7/media/image4.png){width="4.662810586176728in"
+height="3.412037401574803in"}
