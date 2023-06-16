@@ -34,10 +34,10 @@ plotted. The following were discovered:
 -   The early morning hours between 6 and 7 in the morning are also when
     > the humidity is at its highest.
 
-> ![](vertopal_d2eaf3f8086c4bcd8e4823b26f5740d7/media/image2.png){width="6.741898512685914in"
+> ![](vertopal_c00f2c58d73b480891471c57810c576c/media/image2.png){width="6.741898512685914in"
 > height="2.1574070428696412in"}
 >
-> ![](vertopal_d2eaf3f8086c4bcd8e4823b26f5740d7/media/image7.png){width="5.209490376202974in"
+> ![](vertopal_c00f2c58d73b480891471c57810c576c/media/image3.png){width="5.209490376202974in"
 > height="2.754443350831146in"}
 
 -   Around 4 o\'clock in the afternoon is also when the wind speed is
@@ -49,7 +49,7 @@ plotted. The following were discovered:
     > exercise first thing in the morning.The highest peak is at roughly
     > 5:00 p.m.
 
-> ![](vertopal_d2eaf3f8086c4bcd8e4823b26f5740d7/media/image5.png){width="6.905092957130359in"
+> ![](vertopal_c00f2c58d73b480891471c57810c576c/media/image7.png){width="6.905092957130359in"
 > height="2.0833333333333335in"}
 
 In order to update the categorical datas \[\"season\" and \"weather\"\]
@@ -58,7 +58,7 @@ feature engineering. This used integers of 0s and 1s to categorize the
 season and weather into different groups. Below is the heatmap of count
 against the time of the day.
 
-![](vertopal_d2eaf3f8086c4bcd8e4823b26f5740d7/media/image6.png){width="3.6428991688538934in"
+![](vertopal_c00f2c58d73b480891471c57810c576c/media/image6.png){width="3.6428991688538934in"
 height="2.7083333333333335in"}
 
 ### **How much better did your model perform after adding additional features and why do you think that is?**
@@ -73,7 +73,7 @@ kaggle score of 0.56602 was gotten.
 
 Below is the picture of the heatmap after more features were added.
 
-![](vertopal_d2eaf3f8086c4bcd8e4823b26f5740d7/media/image8.png){width="7.135995188101488in"
+![](vertopal_c00f2c58d73b480891471c57810c576c/media/image8.png){width="7.135995188101488in"
 height="3.875in"}
 
 ## **Hyper parameter tuning**
@@ -100,15 +100,41 @@ interprets the input data.
 
 ### **Create a table with the models you ran, the hyperparameters modified, and the kaggle score.**
 
-![](vertopal_d2eaf3f8086c4bcd8e4823b26f5740d7/media/image1.png){width="5.666666666666667in"
+![](vertopal_c00f2c58d73b480891471c57810c576c/media/image1.png){width="5.666666666666667in"
 height="1.9375in"}
 
 ### **Create a line plot showing the top model score for the three (or more) training runs during the project.**
 
-![](vertopal_d2eaf3f8086c4bcd8e4823b26f5740d7/media/image3.png){width="5.506944444444445in"
+![](vertopal_c00f2c58d73b480891471c57810c576c/media/image4.png){width="5.506944444444445in"
 height="4.103732502187227in"}
 
 ### **Create a line plot showing the top kaggle score for the three (or more) prediction submissions during the project.**
 
-![](vertopal_d2eaf3f8086c4bcd8e4823b26f5740d7/media/image4.png){width="4.662810586176728in"
+![](vertopal_c00f2c58d73b480891471c57810c576c/media/image5.png){width="4.662810586176728in"
 height="3.412037401574803in"}
+
+## **Summary**
+
+To begin with, I had to run an EDA on the data to determine its current
+status. On the train data, the Autogluon model was applied, and
+predictions were created using.predict(). It received a kaggle score of
+roughly 1.8 after submission. Season and weather were classified, and
+feature engineering was then used to make better forecasts using
+the.getdummies() function, which was successful because a kaggle score
+of 0.446 was obtained.
+
+A kaggle score was 0.59 after hyperparameter tuning using the
+hyperparameter \"NN\" and its hyperparameter kwargs. With kaggle scores
+of 0.54 and 0.64, respectively, a second \"GBM\" and third \"XGB\" were
+completed.By categorizing, using feature engineering, utilizing the
+Autogluon model, and using the provided standard parameters, more
+features were created, and an Akaggle score of 0.56 was obtained.
+
+Before I got all these scores that seemed good, I had problems with
+exploratory data analysis and projections, which resulted in scores as
+low as 2.71 and similar low numbers. I was able to improve numerous
+reviews after receiving a number of them.
+
+I want to experiment with several models, such as the SVM, RF, and
+others. I\'ll speed up submission by reducing the column to which I
+applied feature engineering.
